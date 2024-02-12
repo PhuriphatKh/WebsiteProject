@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/second-9(2).css">
+</head>
+<body>
+    <header>
+        <div class="header-logo"><image  src = "/images/Main-Logo.png" class="logoheader"> </div>
+        <div class="header-input"> <a href="address-2.html"> <input type="serch" class="main-input" placeholder="ค้นหาร้านอาหารใกล้เคียง"  > </a><img src = "/images/search.png" class="search">  </div>
+        <% if (loggedIn) { %>
+            <div class="user-pic">
+                <a href="login.html">
+                    <img src="/images/user.png" class="user">
+                </a>
+                <a href="setting.html">
+                    <img src="/images/settings.png" class="setting">
+                </a>
+                <a href="/logout" class="logout" id="logout">Logout</a>
+            </div>
+        <% } %>
+        <% if (!loggedIn) { %>
+            <div class="main-user">
+                <img src="/images/user.png" class="user">
+                <a href="/login" class="user-p" id="login">Login</a>
+            </div>
+        <% } %>
+    
+    </header>
+    <div class = type> <p class = p-type style="font-family: 'Chonburi', serif;">ของหวาน</p> 
+        <img class = pic-type src= "/images/Dessert.png">  
+    </div>
+        
+        <div class = mid>
+            <a href="three-9(2).html">
+            <div class = store> 
+                <div class = store-1 >
+                    <div class="img-store-1 "> <img src ="/images/ร้านขนมหวาน1.jpg" class = img-store-1-pic>  </div>
+                    <div class = "text-store-1">
+                        <div class="header-text">
+                        <div class = "text1-store-1"> <div>ชื่อร้าน:</div><div>ป้อนเบาหวาน Homemade Bakery</div></div>
+                        <div class = "text1-store-1"> <div>ประเภท:</div><div> ของหวาน </div></div>
+                        <div class = "text1-store-1"> <div>ที่อยู่:</div><div >169 1 ตำบลแม่กา เมือง พะเยา 56000</div></div> 
+                        <div class = "text1-store-1"> <div>วันเปิด-ปิด:</div><div>จันทร์-ศุกร์</div></div> 
+                        <div class = "text1-store-1"> <div>เวลาเปิด-ปิด:</div><div>15.30-20.30น.</div> </div>
+                        <div class = "text1-store-1"><div>ราคา:</div><div>เริ่มต้น 15 บาท </div></div>
+                        <div class = "text1-store-1"><div>ดาว:</div></div>
+                    </div>
+                    
+    
+                
+                </div>  
+            </div></a>
+    
+            <div class = store> 
+                <div class = store-1 >
+                    <div class="img-store-1 "> <img src = "/images/logo-1.png" class = img-store-1-pic>  </div>
+                    <div class = "text-store-1">
+                        <div class="header-text">
+                        <div class = "text1-store-1"> <div>ชื่อร้าน:</div><div > </div></div>
+                        <div class = "text1-store-1"> <div>ประเภท:</div><div > </div></div>
+                        <div class = "text1-store-1"> <div>ที่อยู่:</div><div > </div></div> 
+                        <div class = "text1-store-1"> <div>วันเปิด-ปิด:</div><div > </div></div> 
+                        <div class = "text1-store-1"> <div>เวลาเปิด-ปิด:</div><div > </div> </div>
+                        <div class = "text1-store-1"><div>ราคา:</div><div >  </div></div>
+                        <div class = "text1-store-1"><div>ดาว:</div></div>
+                    </div>
+                    
+    
+                
+                </div>  
+            </div>
+    
+            <div class = store> 
+                <div class = store-1 >
+                    <div class="img-store-1 "> <img src = "/images/logo-1.png" class = img-store-1-pic>  </div>
+                    <div class = "text-store-1">
+                        <div class="header-text">
+                        <div class = "text1-store-1"> <div>ชื่อร้าน:</div><div > </div></div>
+                        <div class = "text1-store-1"> <div>ประเภท:</div><div > </div></div>
+                        <div class = "text1-store-1"> <div>ที่อยู่:</div><div > </div></div> 
+                        <div class = "text1-store-1"> <div>วันเปิด-ปิด:</div><div > </div></div> 
+                        <div class = "text1-store-1"> <div>เวลาเปิด-ปิด:</div><div > </div> </div>
+                        <div class = "text1-store-1"><div>ราคา:</div><div >  </div></div>
+                        <div class = "text1-store-1"><div>ดาว:</div></div>
+                    </div>
+                    
+    
+                
+                </div>  
+            </div>
+    
+        </div>
+
+    <div class = main-last>   
+        <img src ="/images/last-main-loco.png" class="main-last-pic">
+        <p class = "main-last-slogan" style="font-family: 'Chonburi', serif;"> อาหารดีต้องบอกต่อ</p>
+    </div>
+</body>
+</html>

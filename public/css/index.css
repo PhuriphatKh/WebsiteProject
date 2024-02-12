@@ -1,0 +1,234 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* ให้ align ตรงกลางตามแนวตั้ง */
+    height: 70px;
+    background: #fff;
+}
+.header-logo,.header-input{
+    width: 500px;
+}
+
+.main-input{
+    width: 600px;
+    height: 50px;
+    border: none;
+    background-color: rgb(234, 234, 234);
+    border-radius: 40px ;
+    padding:0 0 0 20px;
+    font-size: 16px;
+}
+.search{
+    margin: 0 0 0 85px;
+    width: 70px;
+    height: 40px;
+    padding:0 0 0 30px;
+
+}
+.main-user{
+    display: flex;
+    flex-direction:row ;
+    border-radius: 40px ;
+    border: 2px solid black;
+    width:150px;
+    height: 50px;
+    margin-left:  170px;
+    padding: 4.5px 0 0 5px;
+    
+}
+.user{
+    
+    width: 40px;
+    height: 40px;
+    
+   
+}
+.user-p{
+    font-size: 16px;
+    padding: 8px 0 0 5px;
+    margin: 0 0 0 15px;
+    cursor: pointer;
+}
+
+.logoheader{
+    
+    width: 100px;
+    height: 60px;
+    padding: 5px 0 0 20px ;
+    
+}
+
+.main-mid{
+    width: 100%;
+    height: 200px;
+    background-image:linear-gradient(to right,#F9B572,#FCF9BE,#FFF6BF);
+    display:flex;
+    flex-direction: row;
+    border-radius: 40px ;
+}
+
+.main-right-para ,.main-left-logo{
+    width: 614px;
+    height: 200px ;
+}
+.main-right-para{
+    padding: 20px 0 0 50px;
+}
+.main-left-logo{
+    display: flex;
+    align-items: flex-end ;
+    justify-content: end;
+    padding: 0 0 0 1500px;
+    
+    
+}
+.main-slogan{
+    font-family: 'Chonburi', serif;
+    font-size: 60px;
+    
+}
+
+.mid-picture{
+    width: 280px;
+    height: 200px;
+    padding: 10px 0 0 0;
+    margin-left: auto;
+    
+}
+
+.type-food{
+    margin: 30px;
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.button-food{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    background: #F9B572;
+    cursor: pointer;
+}
+.button-food:hover{
+    background-color: #d38f4b ;
+
+}
+.Iconfood{
+    
+    width: 60px;
+    height: 60px;   
+   
+} 
+.name-recommend{
+    padding:  0 0 0 40px ;
+    font-size: 30px;
+}
+.recommend{
+    margin: 30px;
+    flex-direction: row;
+    display: flex;
+    text-align:center;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.store-1{
+    border: 2px solid black; /* กำหนดขอบกรอบด้วยเส้นขอบสีดำขนาด 2px */
+    width: 300px; /* กำหนดความกว้างของกรอบ */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.pic-store-1{
+
+    width: 200px; /* กำหนดความกว้างของกรอบ */
+    height: 300px;
+}
+
+.name-store-1{
+    font-size: 20px;
+}
+
+.recommend-2{
+    margin: 80px;
+    flex-direction: row;
+    display: flex;
+    text-align:center;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+.store-2{
+    border: 2px solid black; /* กำหนดขอบกรอบด้วยเส้นขอบสีดำขนาด 2px */
+    width: 300px; /* กำหนดความกว้างของกรอบ */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+.pic-store-2{
+
+    width: 200px; /* กำหนดความกว้างของกรอบ */
+    height: 130px;
+}
+
+.name-store-2{
+    font-size: 20px;
+}
+
+
+
+
+.main-last{
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    width: 100%;
+    height: 200px;
+    background-image:linear-gradient(to right,#f3f0b7,#f8eb94,#f5bd86  );
+}
+.main-last-pic{
+    padding: 50px 0 0 0;
+    width:210px;
+    height:180px;
+}
+.main-last-slogan{
+    padding-top: 90px;
+    font-size: 30px;
+}
+
+.user-pic{
+    margin: 0 0 0 80px;
+    padding: 10px 0 0 0;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+    
+}
+
+.logout{
+    border-radius: 40px ;
+    border: 2px solid #000 ;
+    background-color: rgb(247, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* เพิ่มความกว้างเพื่อให้ข้อความอยู่ตรงกลาง */
+    height: 40px; /* ปรับความสูงให้พอดีกับข้อความ */
+    padding: 0 0 0 0;
+    cursor: pointer;
+}

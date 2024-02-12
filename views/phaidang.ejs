@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ไผ่แดงหมูกระทะ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/phaidang.css">
+</head>
+<body>
+    <header>
+        <div class="header-logo"><image  src = "/images/Main-Logo.png" class="logoheader"> </div>
+        <div class="header-input"> <a href= "address-2.html"> <input type="serch" class="main-input" placeholder="ค้นหาร้านอาหารใกล้เคียง"  ></a> <img src = "/images/search.png" class="search">  </div>
+        <% if (loggedIn) { %>
+            <div class="user-pic">
+                <a href="login.html">
+                    <img src="/images/user.png" class="user">
+                </a>
+                <a href="setting.html">
+                    <img src="/images/settings.png" class="setting">
+                </a>
+                <a href="/logout" class="logout" id="logout">Logout</a>
+            </div>
+        <% } %>
+        <% if (!loggedIn) { %>
+            <div class="main-user">
+                <img src="/images/user.png" class="user">
+                <a href="/login" class="user-p" id="login">Login</a>
+            </div>
+        <% } %>
+    
+    </header>
+    
+    <div class = "back">
+        <div class = "second"> 
+            <div class = "mid-secondpic">
+                <img src = "/images/หมูกระทะ1.jpg" class = "secondpic">
+                <img src = "/images/หมูกระทะ2.jpg" class = "secondpic">
+                <img src = "/images/หมูกระทะ3.jpeg" class = "secondpic">
+                
+            </div>
+        
+        
+    
+        </div>
+        
+        <div class = "detail">
+            <p class = "font">    ชาบูหรือหมูกระทะ </p>
+            <p class = "font">ร้าน ไผ่แดงหมูกระทะ หน้า ม.พะเยา </p>
+            <p class = "font"> </p>
+        </div>
+        
+            
+            <h class = "h" style="font-family: 'Chonburi', serif;">
+                ภาพรวม
+            </h>
+
+            <div class = "detail2">
+                <div class = "img"> <img  src = "/images/day.png" class = "img2" > <p class = "fp">จันทร์-ศุกร์</p></div>
+                <div class = "img"> <img src = "/images/clock.png" class = "img2"><p class = "fp">15.00-23.00 น.</p></div>
+                <div class = "img"> <img src = "/images/telephone.png" class = "img2" ><p class = "fp"> 096 119 2422</p></div>
+                <div class = "img"> <img src = "/images/location.png" class = "img2" ><p class = "fp">67/1-2 ต.แม่กา อ.เมือง จ.พะเยา 56000</p> </div>
+            
+            </div>
+
+        
+            
+
+            <div class = "gps">
+                <img src="/images/แผนที่.png" alt="">
+            </div>
+            
+            <div class = s-review>
+                <a href="/review">
+                <div class = sq-review> 
+                    <img  class = "dee" src = "/images/dee.png">
+                    <p class = "textt" style="font-family: 'Chonburi', serif;">
+                    รีวิว (review) </p>
+                </div></a>
+            </div>
+            
+        <div class = main-last>   
+        <img src ="/images/last-main-loco.png" class="main-last-pic">
+        <p class = "main-last-slogan" style="font-family: 'Chonburi', serif;">อาหารดีต้องบอกต่อ</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+</body>
+</html>

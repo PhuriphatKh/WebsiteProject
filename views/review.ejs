@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/review.css">
+
+
+<script>
+    // ฟังก์ชันเปลี่ยนรูปภาพดาวตามลำดับที่คลิก
+    function changeStarImage(starId) {
+        var star = document.getElementById(starId); // รับ element ดาวจาก ID
+        var currentStarIndex = parseInt(starId.replace('star', '')); // ดึงหมายเลขดาวปัจจุบัน
+        var stars = document.getElementsByClassName('star'); // รับ elements ทั้งหมดของดาว
+
+        // เปลี่ยนรูปภาพของดาวตามลำดับที่คลิก
+        for (var i = 0; i < currentStarIndex; i++) {
+            stars[i].src = "/images/ellowstar.png"; // เปลี่ยนรูปเป็นดาวสีเหลือง
+        }
+
+        for (var i = currentStarIndex; i < stars.length; i++) {
+            stars[i].src = "/images/tar.png"; // เปลี่ยนรูปเป็นดาวธรรมดา
+        }
+    }
+    function displayReview() {
+        var inputText = document.querySelector('.input').value; // ดึงข้อความที่ป้อนใน input
+        var reviewContainer = document.createElement('div'); // สร้าง element div สำหรับเก็บรีวิว
+        reviewContainer.textContent = inputText; // กำหนดข้อความใน div ให้เท่ากับข้อความที่ป้อนใน input
+        var scopeComment = document.querySelector('.scope-comment'); // หา div ที่เป็นเหตุการณ์ scope-comment
+        scopeComment.appendChild(reviewContainer); // เพิ่ม div รีวิวลงใน scope-comment
+    }
+    function changeStarImage(starId) {
+    var star = document.getElementById(starId); // รับ element ดาวจาก ID
+    var currentStarIndex = parseInt(starId.replace('star', '')); // ดึงหมายเลขดาวปัจจุบัน
+    var stars = document.getElementsByClassName('star'); // รับ elements ทั้งหมดของดาว
+
+    // เปลี่ยนรูปภาพของดาวตามลำดับที่คลิก
+    for (var i = 0; i < currentStarIndex; i++) {
+        stars[i].src = "/images/ellowstar.png"; // เปลี่ยนรูปเป็นดาวสีเหลือง
+    }
+
+    for (var i = currentStarIndex; i < stars.length; i++) {
+        stars[i].src = "/images/tar.png"; // เปลี่ยนรูปเป็นดาวธรรมดา
+    }
+
+    // เพิ่มเลขดาวลงในข้อความ
+    var commentText = document.querySelector('.text .input');
+    commentText.value = currentStarIndex + ' ' + commentText.value;
+}
+function submitReview() {
+    // รับค่าข้อความที่กรอก
+    var commentText = document.querySelector('.text .input').value;
+
+    // แสดงรูปดาว
+    var starPreview = document.querySelector('.star-preview');
+    starPreview.style.display = 'inline';
+    starPreview.src = "/images/ellowstar.png";
+
+    // สร้าง element ใหม่สำหรับแสดงข้อความรีวิว
+    var newComment = document.createElement('div');
+    newComment.classList.add('comment');
+    
+    // สร้าง element สำหรับรูป user-pic
+    var userPic = document.createElement('div');
+    userPic.classList.add('user-pic');
+    var userPicImg = document.createElement('img');
+    userPicImg.src = "/images/ser-review.png";
+    userPic.appendChild(userPicImg);
+    newComment.appendChild(userPic);
+
+    // สร้าง element สำหรับชื่อผู้ใช้
+    var userName = document.createElement('p');
+    userName.classList.add('name');
+    newComment.appendChild(userName);
+
+    // เพิ่มข้อความรีวิวลงใน element ใหม่
+    var reviewText = document.createElement('p');
+    reviewText.textContent = commentText;
+    newComment.appendChild(reviewText);
+
+    // เพิ่ม element ใหม่ลงใน scope-comment
+    var scopeComment = document.querySelector('.scope-comment');
+    scopeComment.appendChild(newComment);
+}
+</script>
+
+</head>
+<body>
+    <header>
+        <div class="header-logo"><image  src = "/images/Main-Logo.png" class="logoheader"> </div>
+        <div class="header-input"> <a href=  "address-2.html" > <input type="serch" class="main-input" placeholder="ค้นหาร้านอาหารใกล้เคียง"  ></a> <img src = "/images/earch.png" class="search">  </div>
+
+        <% if (loggedIn) { %>
+            <div class="user-pic">
+                <a href="login.html">
+                    <img src="/images/user.png" class="user">
+                </a>
+                <a href="setting.html">
+                    <img src="/images/settings.png" class="setting">
+                </a>
+                <a href="/logout" class="logout" id="logout">Logout</a>
+            </div>
+        <% } %>
+        <% if (!loggedIn) { %>
+            <div class="main-user">
+                <img src="/images/user.png" class="user">
+                <a href="/login" class="user-p" id="login">Login</a>
+            </div>
+        <% } %>
+        
+    </header>
+    
+    <div class = "back">
+        <div class ="scope-h">
+            <h class = "h" style="font-family: 'Chonburi', serif;">
+           review(รีวิว)
+            </h>
+        </div>
+        <div class = "mid-re">
+            <div class = "scope-comment">
+                <div class = "comment">
+                    <div class = "member-u">
+                        <div class = "user-pic"><a href= "profile.html"><img src = "/images/user-review.png" class = "picr"></a>  </div>
+                        <p class = "name" >   </p>
+                        <div class="scope-star">
+                            <img id="star1" src="/images/star.png" class="star" onclick="changeStarImage('star1')">
+                            <img id="star2" src="/images/star.png" class="star" onclick="changeStarImage('star2')">
+                            <img id="star3" src="/images/star.png" class="star" onclick="changeStarImage('star3')">
+                            <img id="star4" src="/images/star.png" class="star" onclick="changeStarImage('star4')">
+                            <img id="star5" src="/images/star.png" class="star" onclick="changeStarImage('star5')">
+                        </div>
+                        
+                    </div>
+                    <form action="review" method="post">
+                        <div class="text">
+                            <input type="text" class="input" name="review" placeholder="เขียนรีวิว">
+                            <button type="submit">
+                                <img src="/images/share.png" class="shareimg">
+                            </button>
+                        </div>
+                    </form>
+                    
+                    
+
+                </div>
+                <!-- <div class = "scom"> <div class = "comments  "></div></div> -->
+
+                
+            </div>
+        </div>
+        
+        
+       
+            
+        
+                
+        <div class = main-last>   
+        <img src ="/images/last-main-loco.png" class="main-last-pic">
+        <p class = "main-last-slogan" style="font-family: 'Chonburi', serif;"> อาหารดีต้องบอกต่อ</p>
+        </div>
+        
+    </div>   
+    
+    <script>
+        function changeStarImage(starId) {
+            var starElement = document.getElementById(starId);
+            
+            if (starId === 'star1') {
+                starElement.src = "/images/star1.png";
+                document.getElementById('star2').src = "/images/star.png";
+                document.getElementById('star3').src = "/images/star.png";
+                document.getElementById('star4').src = "/images/star.png";
+                document.getElementById('star5').src = "/images/star.png";
+            } else if (starId === 'star2') {
+                starElement.src = "/images/star2.png";
+                document.getElementById('star1').src = "/images/star1.png";
+                document.getElementById('star3').src = "/images/star.png";
+                document.getElementById('star4').src = "/images/star.png";
+                document.getElementById('star5').src = "/images/star.png";
+            } else if (starId === 'star3') {
+                starElement.src = "/images/star3.png";
+                document.getElementById('star1').src = "/images/star1.png";
+                document.getElementById('star2').src = "/images/star2.png";
+                document.getElementById('star4').src = "/images/star.png";
+                document.getElementById('star5').src = "/images/star.png";
+            } else if (starId === 'star4') {
+                starElement.src = "/images/star4.png";
+                document.getElementById('star1').src = "/images/star1.png";
+                document.getElementById('star2').src = "/images/star2.png";
+                document.getElementById('star3').src = "/images/star3.png";
+                document.getElementById('star5').src = "/images/star.png";
+            } else if (starId === 'star5') {
+                starElement.src = "/images/star5.png";
+                document.getElementById('star1').src = "/images/star1.png";
+                document.getElementById('star2').src = "/images/star2.png";
+                document.getElementById('star3').src = "/images/star3.png";
+                document.getElementById('star4').src = "/images/star4.png";
+            } 
+        }
+    </script>
+    
+    
+</body>
+</html>

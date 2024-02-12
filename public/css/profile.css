@@ -1,0 +1,177 @@
+header{
+    display: flex;
+    
+    flex-direction: row;
+    width: 100%;
+    align-items: center; /* ให้ align ตรงกลางตามแนวตั้ง */
+    height: 70px;
+    background: #fff;
+   
+}
+.header-logo,.header-input{
+    width: 606.4px;
+}
+.logoheader{
+    
+    width: 100px;
+    height: 60px;
+    padding: 5px 0 0 20px ;
+   
+}
+.header-input{
+    display: flex;
+    flex-direction: row;
+    
+}
+.main-input{
+    width: 600px;
+    height: 50px;
+    border: none;
+    background-color: rgb(234, 234, 234);
+    border-radius: 40px ;
+    padding:0 0 0 20px;
+    font-size: 16px;
+}
+.search{
+    margin-top: 5px;
+    width: 50px;
+    height: 40px;
+    padding:0px 0px 0px 5px;
+
+}
+
+
+.user-pic{
+    margin: 0 0 0 80px;
+    padding: 10px 0 0 0;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+    
+}
+.user{
+    
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+      
+} 
+.setting{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.logout{
+    border-radius: 40px ;
+    border: 2px solid #000 ;
+    background-color: rgb(247, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* เพิ่มความกว้างเพื่อให้ข้อความอยู่ตรงกลาง */
+    height: 40px; /* ปรับความสูงให้พอดีกับข้อความ */
+    padding: 10px 0 0 0;
+    cursor: pointer;
+}
+
+.blackg{
+    background-color: #FFF78A;
+   
+}
+.scope-h{
+    padding: 30px 0 0 0;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    height: 1200px;
+}
+.h{
+   
+    font-size: 38px;
+    padding:0 0 0 150px;
+    
+}
+.pic-us{
+    width: 60px;
+    height: 50px;
+}
+
+.ssq{
+    width:100%;
+    height: px;
+    display: flex;
+    justify-content: center;
+    margin:50px 0 0 0;
+}
+.sq{
+    width: 800px;
+    height: 1000px;
+    border:  5px solid #E3651D;
+    border-radius: 40px ;
+    background-color: #FFF;
+}
+.data{
+    width:800px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    display: flex;
+    align-items: center;
+   
+}
+.logo{
+    width:800px ;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.pic-logo1{
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+    padding: 30px 0 0 0;
+    
+}
+
+.p{
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    width:600px;
+    height: 50px;
+    border-radius: 40px ;
+    border:  3px solid #000;
+    
+}
+.inputt{
+    width:400px;
+    height: 50PX;
+    padding: 10px;
+    border-radius: 40px;
+    border:  3px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+}
+    
+   
+
+
+.save{
+    margin: 30px 0 0  0;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px ;
+    border:  3px solid #000;
+    background-color: #FFCD4B ;
+}
