@@ -84,14 +84,14 @@ header{
 
 .second{
     margin: 0 0 0 50px;
-    width:100%;
+    width: 1000px;
     height: 540px;
     padding: 50px 0 0 0;
   
    
 }
 .mid-secondpic{
-    width:1200px;
+    width:900px;
     height:500px;
     display: flex;
     flex-direction: row;
@@ -127,7 +127,7 @@ header{
 .font{
    padding: 0 0 0 230px;
     font-size: 24px;
-    width: 100%;
+    width: 900px;
     height: 50px;
 }
 
@@ -147,7 +147,7 @@ header{
   
 }
 .img{
-    width: 100%;
+    width: 900px;
     height: 65px;
     display:flex;
     flex-direction: row; 
@@ -184,7 +184,7 @@ header{
     
 }
 .s-review{
-    width: 100%;
+    width: 100px;
     height: 150px;
     margin: 0 0 0 240px;
     padding: 50px 0 0 0;
@@ -249,7 +249,7 @@ header{
     border-radius: 40px ;
     border: 2px solid black;
     width:150px;
-    height: 50px;
+    height: 45px;
     margin-left:  170px;
     padding: 4.5px 0 0 5px;
     

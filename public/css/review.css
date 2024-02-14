@@ -163,11 +163,12 @@ header{
 }
 .text{
     padding: 0 0 0 45px;
-    width:900px;
+    width:800px;
     height: 50px;
     gap:10px;
 }
 .input{
+    padding-left: 30px;
     font-size: 18px;
     width:760px;
     height: 50px;
@@ -196,10 +197,10 @@ header{
 .main-last-pic{
     padding: 50px 0 0 0;
     width:210px;
-    height:180px;
+    height:150px;
 }
 .main-last-slogan{
-    padding-top: 90px;
+    padding-top: 60px;
     font-size: 30px;
 }
 
@@ -220,4 +221,14 @@ header{
     margin-left:  170px;
     padding: 4.5px 0 0 5px;
     
+}
+
+.review-btn {
+    background-color: rgb(255, 255, 255, 0);
+    padding-top: 14px;
+    border: none;
+}
+
+.btn {
+    width: 30px;
 }

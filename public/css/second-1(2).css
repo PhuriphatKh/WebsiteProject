@@ -96,7 +96,7 @@ header{
     justify-content: center;
     width: 100px; /* เพิ่มความกว้างเพื่อให้ข้อความอยู่ตรงกลาง */
     height: 40px; /* ปรับความสูงให้พอดีกับข้อความ */
-    padding: 10px 0 0 0;
+    padding: 0 0 0 0;
     cursor: pointer;
 }
 .type{

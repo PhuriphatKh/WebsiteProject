@@ -139,11 +139,13 @@ function submitReview() {
                         
                     </div>
                     <form action="review" method="post">
-                        <div class="text">
+                        <div class="text" style="display: flex;">
                             <input type="text" class="input" name="review" placeholder="เขียนรีวิว">
-                            <button type="submit">
-                                <img src="/images/share.png" class="shareimg">
-                            </button>
+                            <div class="btn">
+                                <button type="submit" class="review-btn">
+                                    <img src="/images/share.png" class="shareimg">
+                                </button>
+                            </div>
                         </div>
                     </form>
                     
@@ -170,40 +172,22 @@ function submitReview() {
     
     <script>
         function changeStarImage(starId) {
-            var starElement = document.getElementById(starId);
+            var starNumber = parseInt(starId.replace('star', ''));
+            var reviewInput = document.querySelector('.input[name="review"]');
+            reviewInput.value = starNumber + ' ดาว ';
             
-            if (starId === 'star1') {
-                starElement.src = "/images/star1.png";
-                document.getElementById('star2').src = "/images/star.png";
-                document.getElementById('star3').src = "/images/star.png";
-                document.getElementById('star4').src = "/images/star.png";
-                document.getElementById('star5').src = "/images/star.png";
-            } else if (starId === 'star2') {
-                starElement.src = "/images/star2.png";
-                document.getElementById('star1').src = "/images/star1.png";
-                document.getElementById('star3').src = "/images/star.png";
-                document.getElementById('star4').src = "/images/star.png";
-                document.getElementById('star5').src = "/images/star.png";
-            } else if (starId === 'star3') {
-                starElement.src = "/images/star3.png";
-                document.getElementById('star1').src = "/images/star1.png";
-                document.getElementById('star2').src = "/images/star2.png";
-                document.getElementById('star4').src = "/images/star.png";
-                document.getElementById('star5').src = "/images/star.png";
-            } else if (starId === 'star4') {
-                starElement.src = "/images/star4.png";
-                document.getElementById('star1').src = "/images/star1.png";
-                document.getElementById('star2').src = "/images/star2.png";
-                document.getElementById('star3').src = "/images/star3.png";
-                document.getElementById('star5').src = "/images/star.png";
-            } else if (starId === 'star5') {
-                starElement.src = "/images/star5.png";
-                document.getElementById('star1').src = "/images/star1.png";
-                document.getElementById('star2').src = "/images/star2.png";
-                document.getElementById('star3').src = "/images/star3.png";
-                document.getElementById('star4').src = "/images/star4.png";
-            } 
+            for (var i = 1; i <= 5; i++) {
+                var currentStarId = 'star' + i;
+                var currentStarElement = document.getElementById(currentStarId);
+        
+                if (i <= starNumber) {
+                    currentStarElement.src = "/images/star" + i + ".png";
+                } else {
+                    currentStarElement.src = "/images/star.png";
+                }
+            }
         }
+        
     </script>
     
     

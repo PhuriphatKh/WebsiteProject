@@ -85,7 +85,7 @@ header{
 .main-slogan{
     font-family: 'Chonburi', serif;
     font-size: 60px;
-    
+    width: 400px;
 }
 
 .mid-picture{
@@ -145,6 +145,7 @@ header{
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    border-radius: 40px;
 }
 .pic-store-1{
 
