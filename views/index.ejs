@@ -16,8 +16,16 @@
 <body>
     <header>
         <div class="header-logo"><image  src = "/images/Main-Logo.png" class="logoheader"> </div>
-        <div class="header-input">  <input type="serch" class="main-input" placeholder="ค้นหา" ></div>
-        <div> <img src = "/images/search.png" class="search"></div>
+        <div class="header-input" style="display: flex;">
+            <input type="text" class="main-input" placeholder="ค้นหา" id="input-box" autocomplete="off">
+            <button class="review-btn"><img src="/images/search.png" class="search"></button>
+            <div class="result-box">
+                <ul>
+                    <li>phaidang</li>
+                </ul>
+            </div>
+        </div>
+        
         <div class = main-user>  <img src = "/images/user.png" class="user"  >
         <a href="/login" class = user-p id="login" style="text-decoration: none; color:black; font-family: 'Chonburi, serif" >Login</a> </div>
  

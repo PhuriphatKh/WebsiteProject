@@ -95,17 +95,20 @@ function submitReview() {
 <body>
     <header>
         <div class="header-logo"><image  src = "/images/Main-Logo.png" class="logoheader"> </div>
-        <div class="header-input"> <a href=  "address-2.html" > <input type="serch" class="main-input" placeholder="ค้นหาร้านอาหารใกล้เคียง"  ></a> <img src = "/images/earch.png" class="search">  </div>
+        <div class="header-input"> <a href=  "address-2.html" > <input type="serch" class="main-input" placeholder="ค้นหาร้านอาหารใกล้เคียง"  ></a> <img src = "/images/search.png" class="search">  </div>
 
         <% if (loggedIn) { %>
-            <div class="user-pic">
-                <a href="login.html">
+            <div class="user-pic-1">
+                <a href="/profile">
                     <img src="/images/user.png" class="user">
                 </a>
-                <a href="setting.html">
+                <div class="user-name">
+                    <%= myName %>
+                </div>
+                <a href="/setting" class="setting-1">
                     <img src="/images/settings.png" class="setting">
                 </a>
-                <a href="/logout" class="logout" id="logout">Logout</a>
+                <a href="/logout" class="logout" id="logout" style="text-decoration: none; color:black; font-family: 'Chonburi, serif">Logout</a>
             </div>
         <% } %>
         <% if (!loggedIn) { %>
@@ -128,6 +131,9 @@ function submitReview() {
                 <div class = "comment">
                     <div class = "member-u">
                         <div class = "user-pic"><a href= "profile.html"><img src = "/images/user-review.png" class = "picr"></a>  </div>
+                        <div class="user-name-1">
+                            <%= myName %>
+                        </div>
                         <p class = "name" >   </p>
                         <div class="scope-star">
                             <img id="star1" src="/images/star.png" class="star" onclick="changeStarImage('star1')">

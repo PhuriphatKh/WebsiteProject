@@ -76,22 +76,31 @@
             </div>
             
             <div class = s-review>
-                <a href="/review">
                 <div class = sq-review> 
                     <img  class = "dee" src = "/images/dee.png">
-                    <p class = "textt" style="font-family: 'Chonburi', serif;">
-                    รีวิว (review) </p>
-                </div></a>
+                    <p class = "textt" style="font-family: 'Chonburi', serif;" onclick="review()">รีวิว (review)</p>
+                </div>
             </div>
             
         <div class = main-last>   
-        <img src ="/images/last-main-loco.png" class="main-last-pic">
-        <p class = "main-last-slogan" style="font-family: 'Chonburi', serif;">อาหารดีต้องบอกต่อ</p>
+            <img src ="/images/last-main-loco.png" class="main-last-pic">
+            <p class = "main-last-slogan" style="font-family: 'Chonburi', serif;">อาหารดีต้องบอกต่อ</p>
         </div>
     </div>
     
+    <script>
+        function review() {
+            <% if (loggedIn) { %>
+                window.location.href = "/review";
+            <% } %>
+
+            <% if (!loggedIn) { %>
+                alert('Please login to review')
+            <% } %>
+        }
+    </script>
     
-    
+   
     
     
 </body>

@@ -130,6 +130,7 @@ header{
     height: 300px;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
 .pic-logo1{
     width:200px;

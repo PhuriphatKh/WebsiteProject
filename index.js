@@ -13,6 +13,8 @@ const connection = mysql.createConnection({
 });
 
 global.loggedIn = null
+global.myName = null
+global.lastName = null
 
 const homeController = require('./controllers/homeController')
 const indexController = require('./controllers/indexController')
@@ -37,6 +39,15 @@ app.use("*", (req, res, next) => {
     loggedIn = req.session.MemberID
     next()
 })
+app.use("*", (req, res, next) => {
+    res.locals.myName = req.session.Name;
+    next()
+})
+app.use("*", (req, res, next) => {
+    res.locals.lastName = req.session.lastName;
+    next()
+})
+
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded())
@@ -53,7 +64,7 @@ app.get('/login',redirifAuth, loginController)
 app.get('/signup',redirifAuth, signupController)
 app.get('/logout', logoutController)
 app.get('/phaidang', phaidangController)
-app.get('/review',AuthMiddleware, reviewController)
+app.get('/review', reviewController)
 app.get('/second-1', secondController)
 app.get('/second-2', secondController)
 app.get('/second-3', secondController)
@@ -75,8 +86,11 @@ app.post('/login',redirifAuth, function(request, response) {
         connection.query('SELECT * FROM members WHERE Email = ? AND Password_Member = ?', [email, password], function(error, results, fields) {
             if (results.length > 0) {
                 request.session.MemberID = results[0].Id_Member
+                request.session.Name = results[0].Firstname
+                request.session.lastName = results[0].Lastname
                 response.redirect('/home')
             } else {
+                request.flash('error', '!!!Invalid email or password!!!');
                 response.redirect('/login')
             }
             response.end();

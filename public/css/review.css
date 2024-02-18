@@ -44,7 +44,7 @@ header{
 .user-pic{
     margin: 0 0 0 80px;
     padding: 10px 0 0 0;
-    width: 250px;
+    width: 70px;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -52,6 +52,19 @@ header{
     gap: 5px;
     
 }
+
+.user-pic-1{
+    margin: 0 0 0 80px;
+    padding: 10px 0 0 0;
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+    
+}
+
 .user{
     
     width: 40px;
@@ -75,9 +88,8 @@ header{
     justify-content: center;
     width: 100px; /* เพิ่มความกว้างเพื่อให้ข้อความอยู่ตรงกลาง */
     height: 40px; /* ปรับความสูงให้พอดีกับข้อความ */
-    padding: 10px 0 0 0;
+    padding: 0 0 0 0;
     cursor: pointer;
-   
 }
 
 
@@ -129,11 +141,7 @@ header{
     flex-direction: row;
     gap:10px
 }
-.user-pic{
-    width: 80px;
-    height: 50px;
-    padding: 0 0 0 30px;
-}
+
 .picr{
     width: 50px;
     height: 50px;
@@ -204,6 +212,16 @@ header{
     font-size: 30px;
 }
 
+.user-name {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.user-name-1 {
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
 .user-p{
     font-size: 16px;
     padding: 8px 0 0 5px;
@@ -231,4 +249,8 @@ header{
 
 .btn {
     width: 30px;
+}
+
+.setting-1 {
+    padding-left: 10px;
 }

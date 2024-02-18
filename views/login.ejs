@@ -22,6 +22,11 @@
                 </div>
                 <button type="submit">Login</button>
                 <div class="signup-btn">You don't have an account? <a href = "/signup">Sign Up</a> </div>
+                <% if (flash && flash.error) { %>
+                    <div class="alert alert-danger">
+                        <%= flash.error %>
+                    </div>
+                <% } %>
             </form>
         </div>
     </div>
